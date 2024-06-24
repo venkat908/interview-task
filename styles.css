@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    cursor: crosshair;
+}
+
+#wizard {
+    width: 450px;
+    height: 450px;
+    background-image: url('wizaart-img.56787174.gif'); 
+    background-size: cover;
+    position: absolute;
+    transition: transform 1s;
+}
+     
