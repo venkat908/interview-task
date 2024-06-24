@@ -1,23 +1,17 @@
-
-     
 body {
     margin: 0;
     overflow: hidden;
     background-color: #fff;
     height: 100vh;
     cursor: crosshair;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
 }
 
 #wizard {
-    width: 32px; 
-    height: 32px; 
-    background-image: url('wizaart-img.56787174.gif'); 
+    width: 32px; /* Reduced size */
+    height: 32px; /* Reduced size */
+    background-image: url('wizaart-img.56787174.gif'); /* Path to your wizard image */
     background-size: cover;
     position: absolute;
-    transition: transform 2s, scaleX 0.5s; 
-    transform-origin: center; 
+    transition: left 2s, top 2s, transform 0.5s;
 }
