@@ -1,18 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
     const wizard = document.getElementById('wizard');
-    let wizardWidth = wizard.offsetWidth / 2;
-    let wizardHeight = wizard.offsetHeight / 2;
 
     document.body.addEventListener('click', function(event) {
-        let clickX = event.clientX - wizardWidth;
-        let clickY = event.clientY - wizardHeight;
+        let clickX = event.clientX;
+        let clickY = event.clientY;
 
-        let wizardX = wizard.offsetLeft;
-        let wizardY = wizard.offsetTop;
+        let wizardX = clickX - (wizard.offsetWidth / 2);
+        let wizardY = clickY - (wizard.offsetHeight / 2);
 
-        let direction = clickX > wizardX ? 'right' : 'left';
+        let direction = clickX > wizard.offsetLeft ? 'right' : 'left';
 
-        wizard.style.transform = `translate(${clickX}px, ${clickY}px) scaleX(${direction === 'left' ? 1 : -1})`;
+        wizard.style.transform = `translate(${wizardX}px, ${wizardY}px) scaleX(${direction === 'right' ? 1 : -1})`;
     });
 });
 
